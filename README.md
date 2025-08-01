@@ -5,5 +5,6 @@
 # 目录
 
 - [Git](Git.md)
-- [暑假计划表](acm_summer_training_plan.md)
+- [暑假计划表](ACM%20暑假安排.md)
+- [ACM学习路线](ACM学习路线.md)
 

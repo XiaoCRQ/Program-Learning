@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "acm_summer_training_plan.md",
+                "file": "ACM学习路线.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "acm_summer_training_plan"
+              "title": "ACM学习路线"
             }
           }
         ]
@@ -171,11 +171,13 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "92a6b64fa6fa259f",
+  "active": "d130fa0611d1ef75",
   "lastOpenFiles": [
-    "Example.md",
-    "Git.md",
     "README.md",
+    "ACM学习路线.md",
+    "Example.md",
+    "ACM 暑假安排.md",
+    "Git.md",
     "计算机/2025年对口升学——计算机复习清单.md",
     "计算机/易错知识点总结/组装/分区表.md",
     "Resource/考纲.pdf",
@@ -198,8 +200,6 @@
     "计算机/易错知识点总结/网络/传输模式.md",
     "计算机/易错知识点总结/网络/光纤.md",
     "计算机/易错知识点总结/网络/IPv4.md",
-    "计算机/易错知识点总结/组装/cmd.md",
-    "计算机/易错知识点总结/组装/内存种类.md",
     "Resource/15-19阅读练习.pdf",
     "Resource/Pasted image 20250601170844.png",
     "Resource/2025年湖南省普通高等学校对口招生考试 东博金卷 英语-答案.pdf",
