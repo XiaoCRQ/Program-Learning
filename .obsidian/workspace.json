@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ACM学习路线.md",
+                "file": "ACM 暑假安排.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ACM学习路线"
+              "title": "ACM 暑假安排"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211.5
+    "width": 211.5,
+    "collapsed": true
   },
   "right": {
     "id": "c2d9f38f26cfdb3f",
@@ -171,13 +172,13 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "d130fa0611d1ef75",
+  "active": "92a6b64fa6fa259f",
   "lastOpenFiles": [
-    "README.md",
-    "ACM学习路线.md",
     "Example.md",
-    "ACM 暑假安排.md",
     "Git.md",
+    "ACM学习路线.md",
+    "README.md",
+    "ACM 暑假安排.md",
     "计算机/2025年对口升学——计算机复习清单.md",
     "计算机/易错知识点总结/组装/分区表.md",
     "Resource/考纲.pdf",
