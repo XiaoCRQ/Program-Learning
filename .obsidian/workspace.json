@@ -1,0 +1,227 @@
+{
+  "main": {
+    "id": "80f6d421ddff172d",
+    "type": "split",
+    "children": [
+      {
+        "id": "90bf4c7133be0efb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92a6b64fa6fa259f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Git"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7714d6839f7a4516",
+    "type": "split",
+    "children": [
+      {
+        "id": "72d07a3429d1102c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d130fa0611d1ef75",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "00cba86faee15bd8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "d0227cabd1aaa9ba",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 211.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "c2d9f38f26cfdb3f",
+    "type": "split",
+    "children": [
+      {
+        "id": "88b253a48efeff70",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bafdefdb1bfcb931",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "语文/错题整理/选择题.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "选择题 的反向链接列表"
+            }
+          },
+          {
+            "id": "fd08cdf1daa136bd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "计算机/易错知识点总结/网站/IIS管理器.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "IIS管理器 的出链列表"
+            }
+          },
+          {
+            "id": "e52940f178903345",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "74333d2b08b376b8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "语文/错题整理/散文.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "散文 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
+    }
+  },
+  "active": "92a6b64fa6fa259f",
+  "lastOpenFiles": [
+    "README.md",
+    "Git.md",
+    "Example.md",
+    "计算机/2025年对口升学——计算机复习清单.md",
+    "计算机/易错知识点总结/组装/分区表.md",
+    "Resource/考纲.pdf",
+    "计算机/易错知识点总结/组装/POST卡.md",
+    "计算机/易错知识点总结/组装/主板报错.md",
+    "计算机/易错知识点总结/网站/DHCP.md",
+    "计算机/易错知识点总结/网站/DNS.md",
+    "计算机/易错知识点总结/网站/FTP.md",
+    "计算机/易错知识点总结/网站/IIS管理器.md",
+    "计算机/易错知识点总结/C语言/运算符.md",
+    "计算机/易错知识点总结/C语言/关键字.md",
+    "计算机/易错知识点总结/C语言/文件操作.md",
+    "计算机/易错知识点总结/C语言/字符串操作.md",
+    "计算机/易错知识点总结/组装/分区格式.md",
+    "计算机/易错知识点总结/组装/ASUS_UEFI_BIOS.md",
+    "计算机/易错知识点总结/Office/Excel/公式.md",
+    "计算机/易错知识点总结/Office/快捷键.md",
+    "计算机/易错知识点总结/组装/计算机组装流程.md",
+    "计算机/易错知识点总结/网页/表单.md",
+    "计算机/易错知识点总结/网络/传输模式.md",
+    "计算机/易错知识点总结/网络/光纤.md",
+    "计算机/易错知识点总结/网络/IPv4.md",
+    "计算机/易错知识点总结/组装/cmd.md",
+    "计算机/易错知识点总结/组装/内存种类.md",
+    "Resource/15-19阅读练习.pdf",
+    "Resource/Pasted image 20250601170844.png",
+    "Resource/2025年湖南省普通高等学校对口招生考试 东博金卷 英语-答案.pdf",
+    "Resource/2024计算机答案.pdf",
+    "Resource/高考研究体三模.pdf",
+    "Resource/高考研究体二模.pdf",
+    "Resource/高考联合体第二次联考语文-答案.pdf",
+    "Resource/高考联合体第三次联考语文-答案.pdf",
+    "Resource/四校联考.pdf",
+    "Resource/常德市联考.pdf",
+    "Resource/Pasted image 20250528131054.png",
+    "Resource/Pasted image 20250528125650.png",
+    "Resource/Pasted image 20250528125206.png",
+    "Resource/Pasted image 20250528124945.png",
+    "Resource/Pasted image 20250528124738.png",
+    "Resource/Pasted image 20250528112635.png",
+    "Resource/5737f26acd302126ff05637f6cd9e1df 1.png",
+    "Resource/5737f26acd302126ff05637f6cd9e1df.png",
+    "Resource/Pasted image 20250523105829.png",
+    "语文/未命名.canvas",
+    "计算机/易错知识点总结/常用软件/未命名.canvas",
+    "未命名.canvas"
+  ]
+}

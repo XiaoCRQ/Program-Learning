@@ -1,0 +1,17 @@
+{
+  "vimMode": true,
+  "promptDelete": false,
+  "newLinkFormat": "relative",
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "Resource",
+  "newFileLocation": "current",
+  "useMarkdownLinks": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  }
+}
