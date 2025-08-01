@@ -210,7 +210,7 @@ git clone <url>          # 克隆远程仓库
 git init                 # 初始化本地仓库
 git add .                     # 添加所有更改（包括新文件、修改、删除）
 git commit -m "你的提交信息"   # 提交更改
-
+git branch -M main
 git remote set-url origin git@github.com:Username/Project.git
 
 git push -u origin main --force

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git"
+              "title": "README"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211.5,
-    "collapsed": true
+    "width": 211.5
   },
   "right": {
     "id": "c2d9f38f26cfdb3f",
@@ -174,8 +173,8 @@
   },
   "active": "92a6b64fa6fa259f",
   "lastOpenFiles": [
-    "README.md",
     "Git.md",
+    "README.md",
     "Example.md",
     "计算机/2025年对口升学——计算机复习清单.md",
     "计算机/易错知识点总结/组装/分区表.md",
