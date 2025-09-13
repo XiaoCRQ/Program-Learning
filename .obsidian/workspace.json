@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211.5,
-    "collapsed": true
+    "width": 211.5
   },
   "right": {
     "id": "c2d9f38f26cfdb3f",
@@ -161,6 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -174,10 +174,10 @@
   },
   "active": "92a6b64fa6fa259f",
   "lastOpenFiles": [
-    "README.md",
-    "Git.md",
     "Example.md",
+    "Git.md",
     "ACM学习路线.md",
+    "README.md",
     "ACM 暑假安排.md",
     "计算机/2025年对口升学——计算机复习清单.md",
     "计算机/易错知识点总结/组装/分区表.md",
