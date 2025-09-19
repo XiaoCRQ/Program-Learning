@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "语文/错题整理/选择题.md",
+                "file": "ACM学习路线.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "选择题 的反向链接列表"
+              "title": "ACM学习路线 的反向链接列表"
             }
           },
           {
@@ -142,16 +142,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "语文/错题整理/散文.md",
+                "file": "ACM学习路线.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "散文 的大纲"
+              "title": "ACM学习路线 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -175,8 +176,8 @@
   "active": "92a6b64fa6fa259f",
   "lastOpenFiles": [
     "Example.md",
-    "Git.md",
     "ACM学习路线.md",
+    "Git.md",
     "README.md",
     "ACM 暑假安排.md",
     "计算机/2025年对口升学——计算机复习清单.md",
