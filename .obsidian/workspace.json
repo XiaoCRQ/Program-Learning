@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "ACM学习路线"
             }
+          },
+          {
+            "id": "d4db57fa655f63bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "一些常用软件.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "一些常用软件"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -173,10 +188,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "92a6b64fa6fa259f",
+  "active": "d4db57fa655f63bd",
   "lastOpenFiles": [
-    "Example.md",
     "ACM学习路线.md",
+    "一些常用软件.md",
+    "未命名",
+    "Example.md",
     "Git.md",
     "README.md",
     "ACM 暑假安排.md",
@@ -201,7 +218,6 @@
     "计算机/易错知识点总结/网页/表单.md",
     "计算机/易错知识点总结/网络/传输模式.md",
     "计算机/易错知识点总结/网络/光纤.md",
-    "计算机/易错知识点总结/网络/IPv4.md",
     "Resource/15-19阅读练习.pdf",
     "Resource/Pasted image 20250601170844.png",
     "Resource/2025年湖南省普通高等学校对口招生考试 东博金卷 英语-答案.pdf",
@@ -211,7 +227,6 @@
     "Resource/高考联合体第二次联考语文-答案.pdf",
     "Resource/高考联合体第三次联考语文-答案.pdf",
     "Resource/四校联考.pdf",
-    "Resource/常德市联考.pdf",
     "Resource/Pasted image 20250528131054.png",
     "Resource/Pasted image 20250528125650.png",
     "Resource/Pasted image 20250528125206.png",
