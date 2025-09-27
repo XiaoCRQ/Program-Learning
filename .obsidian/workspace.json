@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "四年规划.md",
+                "file": "ACM学习路线.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "四年规划"
+              "title": "ACM学习路线"
             }
           }
         ]
@@ -176,11 +176,11 @@
   "active": "6e46fe04ad5af88f",
   "lastOpenFiles": [
     "一些常用软件.md",
+    "C++ 备忘录/未命名.md",
+    "四年规划.md",
     "ACM学习路线.md",
     "Example.md",
-    "四年规划.md",
     "未命名",
-    "C++ 备忘录/未命名.md",
     "C++ 备忘录",
     "Git.md",
     "README.md",
