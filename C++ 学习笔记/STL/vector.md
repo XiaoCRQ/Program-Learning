@@ -9,8 +9,8 @@
 - `vector<T> v(begin, end);` → 用迭代器区间构造。
     
 - `vector<T> v{a, b, c};` → 初始化列表。
-    
-
+## 二维数组
+- `vector<vector<int>> arr(n, vector<int>(m))` → 创建n\*m的数组
 ---
 
 # 基本属性
