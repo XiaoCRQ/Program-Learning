@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -216,15 +216,15 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "615aaf9a6d990dcf",
+  "active": "1b3ff913b1c18e8f",
   "lastOpenFiles": [
+    "C++ 学习笔记/STL/vector.md",
     "C++ 备忘录/IOS速查表.md",
     "C++ 备忘录/一些常用函数.md",
     "C++ 备忘录/IO备忘表.md",
     "C++ 备忘录/IO优化.md",
     "C++ 学习笔记/STL/array.md",
     "C++ 学习笔记/STL/set.md",
-    "C++ 学习笔记/STL/vector.md",
     "C++ 学习笔记/STL/string.md",
     "C++ 学习笔记/STL/list.md",
     "C++ 学习笔记/16章/未命名.md",
