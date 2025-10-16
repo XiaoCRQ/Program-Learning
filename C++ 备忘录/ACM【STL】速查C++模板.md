@@ -148,11 +148,4 @@ cout << '\n';
 // 4) 堆维护（top-k）： make_heap(v.begin(), v.end()); pop_heap(...); v.pop_back();
 // 5) 并/交/差（有序）： set_union, set_intersection, set_difference
 // 6) 哈希计数： unordered_map<int,int> cnt; cnt[x]++; // 统计频率
-
-/* ==================== 结束 ==================== */
-/* 如果你愿意，我可以：
-   - 把这份内容保存为单个 `.hpp` 文件并提供下载链接；
-   - 或按“块”拆成多个头文件示例（例如 vector.hpp, containers.hpp, algorithms.hpp）；
-   - 或生成更精简的单页打印版（Markdown 或 PDF）。
-   选一个我就直接生成。 */
 ```
