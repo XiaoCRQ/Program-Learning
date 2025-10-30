@@ -4,6 +4,43 @@
     For ACM / Competitive Programming
 ====================================================================*/
 
+//===== 基本数据类型 =====//
+int x = 0;                // 有符号整数（通常 4 字节）
+unsigned int x = 0U;      // 无符号整数
+short x = 0;              // 短整型（至少 2 字节）
+unsigned short x = 0;     // 无符号短整型
+long x = 0L;              // 长整型（至少 4 字节）
+unsigned long x = 0UL;    // 无符号长整型
+long long x = 0LL;        // 长长整型（至少 8 字节）
+unsigned long long x = 0ULL; // 无符号长长整型
+float x = 0.0f;           // 单精度浮点数（通常 4 字节）
+double x = 0.0;           // 双精度浮点数（通常 8 字节）
+long double x = 0.0L;     // 扩展精度浮点数
+char x = 'a';             // 字符（1 字节，有符号/无符号由实现定义）
+signed char x = 'a';      // 有符号字符（范围 -128 ~ 127）
+unsigned char x = 'a';    // 无符号字符（范围 0 ~ 255）
+bool x = true;            // 布尔类型（true / false）
+void* ptr = nullptr;      // 无类型指针（不能直接解引用）
+
+//===== 类型字面量后缀与自动推导 =====//
+auto x = 42;              // 自动推导类型（此处为 int）
+decltype(x) y = 0;        // 声明与 x 相同类型的变量 y
+
+//===== 字符判断（需包含 <cctype>）=====//
+bool b = isalnum(c);   // 是否为字母或数字 ('0'-'9', 'a'-'z', 'A'-'Z')
+bool b = isalpha(c);   // 是否为字母 ('a'-'z', 'A'-'Z')
+bool b = isdigit(c);   // 是否为数字 ('0'-'9')
+bool b = isxdigit(c);  // 是否为十六进制数字 ('0'-'9', 'a'-'f', 'A'-'F')
+bool b = islower(c);   // 是否为小写字母 ('a'-'z')
+bool b = isupper(c);   // 是否为大写字母 ('A'-'Z')
+bool b = isspace(c);   // 是否为空白字符 (' ', '\t', '\n', '\v', '\f', '\r')
+bool b = iscntrl(c);   // 是否为控制字符 (0x00–0x1F, 0x7F)
+bool b = isprint(c);   // 是否为可打印字符 (包括空格，0x20–0x7E)
+bool b = isgraph(c);   // 是否为可打印非空格字符 (0x21–0x7E)
+bool b = ispunct(c);   // 是否为标点符号 (可打印但非字母数字或空格)
+bool b = isascii(c);   // 是否为 ASCII 字符 (0x00–0x7F) —— 注意：非标准但广泛支持
+char c2 = tolower(c);  // 若 c 为大写字母，则转为小写；否则返回 c 不变
+char c2 = toupper(c);  // 若 c 为小写字母，则转为大写；否则返回 c 不变
 
 //====================================================================
 // <algorithm>
