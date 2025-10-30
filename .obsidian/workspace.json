@@ -35,8 +35,7 @@
               "title": "ACM【实战模板】速查C++模板"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,10 +187,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "a546f3f5f247a206",
+  "active": "5e3912a9f2caafb9",
   "lastOpenFiles": [
-    "C++ 备忘录/ACM【STL】速查C++模板.md",
     "C++ 备忘录/ACM【实战模板】速查C++模板.md",
+    "C++ 备忘录/ACM【STL】速查C++模板.md",
     "C++ 备忘录/ACM【库函数】速查C++模板.md",
     "C++ 备忘录/IO优化.md",
     "C++ 备忘录/IO备忘表.md",
