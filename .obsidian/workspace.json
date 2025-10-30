@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++ 备忘录/ACM【库函数】速查C++模板.md",
+                "file": "C++ 备忘录/ACM【实战模板】速查C++模板.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ACM【库函数】速查C++模板"
+              "title": "ACM【实战模板】速查C++模板"
             }
           }
         ],
@@ -190,10 +190,10 @@
   },
   "active": "a546f3f5f247a206",
   "lastOpenFiles": [
-    "C++ 备忘录/ACM【模板函数】速查C++模板.md",
     "C++ 备忘录/ACM【STL】速查C++模板.md",
-    "C++ 备忘录/IO优化.md",
+    "C++ 备忘录/ACM【实战模板】速查C++模板.md",
     "C++ 备忘录/ACM【库函数】速查C++模板.md",
+    "C++ 备忘录/IO优化.md",
     "C++ 备忘录/IO备忘表.md",
     "C++ 学习笔记/algorithm.h.md",
     "C++ 学习笔记/unordered_map.h.md",
