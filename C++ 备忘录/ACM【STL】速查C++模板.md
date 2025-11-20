@@ -92,6 +92,57 @@ priority_queue<int> pq;                   // 默认最大堆
 pq.push(x); pq.pop(); int top = pq.top();
 // 最小堆：priority_queue<int, vector<int>, greater<int>> pqmin;
 
+/* ==================== <list> ==================== */
+// 链表基本操作（支持双向链表，适合频繁插入删除）
+list<int> lst = {1, 2, 3, 4, 5};        // 初始化
+int sz = lst.size();                     // 大小
+lst.empty();                             // 是否为空
+lst.push_front(0);                       // 头部插入
+lst.push_back(6);                        // 尾部插入
+lst.pop_front();                         // 头部删除
+lst.pop_back();                          // 尾部删除
+lst.insert(lst.begin(), 10);             // 指定位置插入
+lst.erase(lst.begin());                  // 指定位置删除
+lst.clear();                             // 清空
+lst.remove(3);                           // 删除所有值为3的元素
+lst.reverse();                           // 反转链表
+lst.sort();                              // 排序（自动去重）
+lst.unique();                            // 去重（相邻元素）
+lst.splice(lst.begin(), other_list);     // 移动其他链表元素到当前位置
+// 遍历访问
+for (auto it = lst.begin(); it != lst.end(); ++it) {
+    cout << *it << " ";
+}
+for (int x : lst) {                      // 范围for
+    cout << x << " ";
+}
+auto it = lst.begin();
+int val = *it;                           // 访问当前元素
+++it;                                    // 移动到下一个
+--it;                                    // 移动到上一个
+// 前向迭代器操作
+list<int>::iterator pos = lst.begin();
+advance(pos, 2);                         // 迭代器向前移动2位
+
+/* ==================== <forward_list> ==================== */
+// 单向链表操作（内存效率更高，但功能受限）
+forward_list<int> flst = {1, 2, 3};     // 初始化
+flst.empty();                            // 是否为空
+flst.push_front(0);                      // 头部插入（唯一插入位置）
+flst.pop_front();                        // 头部删除（唯一删除位置）
+flst.insert_after(flst.begin(), 10);     // 指定位置后插入
+flst.erase_after(flst.begin());          // 指定位置后删除
+flst.clear();                            // 清空
+flst.reverse();                          // 反转
+flst.sort();                             // 排序
+flst.unique();                           // 去重
+// 遍历访问
+for (auto it = flst.begin(); it != flst.end(); ++it) {
+    cout << *it << " ";
+}
+for (int x : flst) {                     // 范围for
+    cout << x << " ";
+}
 /* ==================== <stack> ==================== */
 stack<int> stck;
 stck.push(x);
