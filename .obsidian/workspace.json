@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++ 备忘录/ACM【库函数】速查C++模板.md",
+                "file": "C++ 学习笔记/STL/vector.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ACM【库函数】速查C++模板"
-            }
-          },
-          {
-            "id": "763e592b018c278c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Git.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Git"
+              "title": "vector"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,12 +173,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "763e592b018c278c",
+  "active": "5e3912a9f2caafb9",
   "lastOpenFiles": [
-    "C++ 备忘录/位运算.md",
+    "C++ 学习笔记/STL/string.md",
+    "C++ 学习笔记/STL/list.md",
+    "C++ 学习笔记/STL/array.md",
+    "C++ 备忘录/ACM【STL】速查C++模板.md",
     "C++ 备忘录/ACM【库函数】速查C++模板.md",
     "C++ 备忘录/ACM【实战模板】速查C++模板.md",
-    "C++ 备忘录/ACM【STL】速查C++模板.md",
+    "Git.md",
+    "C++ 备忘录/位运算.md",
     "C++ 备忘录/IO优化.md",
     "C++ 备忘录/IO备忘表.md",
     "C++ 学习笔记/algorithm.h.md",
@@ -202,14 +191,10 @@
     "C++ 备忘录/一些常用函数.md",
     "C++ 备忘录/IOS速查表.md",
     "C++ 学习笔记/STL/vector.md",
-    "C++ 学习笔记/STL/array.md",
-    "C++ 学习笔记/STL/string.md",
     "C++ 学习笔记/STL/set.md",
-    "C++ 学习笔记/STL/list.md",
     "C++ 学习笔记/16章/未命名.md",
     "四年规划.md",
     "Example.md",
-    "Git.md",
     "C++ 学习笔记/STL",
     "C++ 学习笔记",
     "ACM学习路线.md",
