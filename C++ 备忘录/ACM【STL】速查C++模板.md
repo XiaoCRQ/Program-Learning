@@ -45,7 +45,7 @@ size_t q = s.rfind("x");                 // 逆向查找
 s.replace(pos, len, "new");              // 替换
 s.insert(pos, "ins");                    // 插入
 s.erase(pos, len);                       // 删除
-int x = stoi("123");                     // 字符串转数（stoi, stol, stoll, stof...)
+int x = toi("123");  s                   // 字符串转数（stoi, stol, stoll, stof...)
 string u = to_string(123);               // 数转字符串
 // C 风格快速访问
 const char *c = s.c_str();
