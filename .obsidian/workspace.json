@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "4dc7d8fae6d2b5b2",
+        "id": "fbd4c1b1027a8da9",
         "type": "tabs",
         "children": [
           {
-            "id": "5e3912a9f2caafb9",
+            "id": "f027e7b41d255802",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++ 学习笔记/STL/vector.md",
+                "file": "四年规划.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vector"
+              "title": "四年规划"
+            }
+          },
+          {
+            "id": "c7f94b7bee90f068",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++ 学习笔记/algorithm.h.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "algorithm.h"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -173,8 +188,18 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5e3912a9f2caafb9",
+  "active": "c7f94b7bee90f068",
   "lastOpenFiles": [
+    "C++ 学习笔记/Drawing 2025-12-05 16.45.09.excalidraw.md",
+    "C++ 学习笔记/algorithm.h.md",
+    "C++ 学习笔记/未命名.md",
+    "四年规划.md",
+    "一些常用软件.md",
+    "Git.md",
+    "ACM学习路线.md",
+    "README.md",
+    "Example.md",
+    "C++ 学习笔记/STL/vector.md",
     "C++ 学习笔记/STL/string.md",
     "C++ 备忘录/IOS速查表.md",
     "C++ 备忘录/ACM【STL】速查C++模板.md",
@@ -184,28 +209,18 @@
     "C++ 备忘录/IO优化.md",
     "C++ 备忘录/一些常用函数.md",
     "C++ 学习笔记/unordered_map.h.md",
-    "C++ 学习笔记/STL/vector.md",
     "C++ 学习笔记/STL/set.md",
     "C++ 学习笔记/STL/list.md",
     "C++ 学习笔记/STL/array.md",
-    "Git.md",
     "C++ 备忘录/位运算.md",
-    "C++ 学习笔记/algorithm.h.md",
     "未命名",
     "C++ 学习笔记/16章/未命名.md",
-    "四年规划.md",
-    "Example.md",
     "C++ 学习笔记/STL",
     "C++ 学习笔记",
-    "ACM学习路线.md",
-    "一些常用软件.md",
     "C++ 备忘录",
-    "README.md",
     "ACM 暑假安排.md",
     "计算机/2025年对口升学——计算机复习清单.md",
-    "计算机/易错知识点总结/组装/分区表.md",
     "Resource/考纲.pdf",
-    "计算机/易错知识点总结/组装/POST卡.md",
     "Resource/15-19阅读练习.pdf",
     "Resource/Pasted image 20250601170844.png",
     "Resource/2025年湖南省普通高等学校对口招生考试 东博金卷 英语-答案.pdf",
