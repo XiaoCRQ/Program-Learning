@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++ 备忘录/一些常用函数.md",
+                "file": "C++ 备忘录/ACM【库函数】速查C++模板.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "一些常用函数"
+              "title": "ACM【库函数】速查C++模板"
             }
           }
         ],
@@ -190,9 +190,10 @@
   },
   "active": "c7f94b7bee90f068",
   "lastOpenFiles": [
+    "C++ 备忘录/ACM【实战模板】速查C++模板.md",
+    "C++ 备忘录/一些常用函数.md",
     "C++ 备忘录/ACM【库函数】速查C++模板.md",
     "C++ 备忘录/ACM【STL】速查C++模板.md",
-    "C++ 备忘录/ACM【实战模板】速查C++模板.md",
     "C++ 备忘录/IO备忘表.md",
     "C++ 学习笔记/STL/array.md",
     "C++ 学习笔记/STL/list.md",
@@ -201,7 +202,6 @@
     "C++ 学习笔记/Drawing 2025-12-05 16.45.09.excalidraw.md",
     "C++ 学习笔记/algorithm.h.md",
     "C++ 学习笔记/STL/vector.md",
-    "C++ 备忘录/一些常用函数.md",
     "C++ 学习笔记/未命名.md",
     "四年规划.md",
     "一些常用软件.md",
