@@ -8,7 +8,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// ------------------------
+// ------------------------[ACM【库函数】速查C++模板](ACM【库函数】速查C++模板.md)
 // 类型定义
 // ------------------------
 typedef long long ll;
