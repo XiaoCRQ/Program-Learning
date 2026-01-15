@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++ 备忘录/数据范围.md",
+                "file": "C++ 备忘录/位运算.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "数据范围"
+              "title": "位运算"
             }
           }
         ],
@@ -204,8 +204,8 @@
   },
   "active": "3e148d67eb6f0331",
   "lastOpenFiles": [
-    "C++ 备忘录/IOS速查表.md",
     "C++ 备忘录/数据范围.md",
+    "C++ 备忘录/IOS速查表.md",
     "C++ 备忘录/IO优化.md",
     "C++ 备忘录/IO备忘表.md",
     "C++ 备忘录/求解因数数量.md",
