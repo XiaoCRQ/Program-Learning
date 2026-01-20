@@ -1,0 +1,15 @@
+# CompileFlags:
+#   Add:
+#     - "-Wall" # 启用所有常见警告
+#     - "-fuse-ld=lld" # 使用LLVM的lld连接器
+#     - "--target=x86_64-pc-windows-gnu" # 使用 MinGW 目标
+    # - "-IC:/Program Files/compiler/mingw64/x86_64-w64-mingw32/include" # MinGW 的头文件路径
+    # - "-IC:/Program Files/compiler/mingw64/x86_64-w64-mingw32/include/PDCurses"
+
+InlayHints:
+  BlockEnd: No
+  Designators: No
+  Enabled: No
+  ParameterNames: No
+  DeducedTypes: No
+  TypeNameLimit: 24
