@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Example.md",
+                "file": "Git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Example"
+              "title": "Git"
             }
           }
         ]
@@ -175,6 +175,7 @@
   },
   "active": "4806dda68621b322",
   "lastOpenFiles": [
+    "Example.md",
     "Git.md",
     "C++ 学习笔记/目录.md",
     "C++ 备忘录/目录.md",
@@ -186,7 +187,6 @@
     "C++ 竞赛模板库",
     "C++ 备忘录/一些常用函数.md",
     "README.md",
-    "Example.md",
     "C++ 学习笔记/STL容器总结.md",
     "一些常用软件.md",
     "ACM学习路线.md",
