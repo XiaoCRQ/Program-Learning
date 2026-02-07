@@ -35,3 +35,20 @@ inline void out(pl x) {
   out(x.second);
   putchar(' ');
 }
+
+void io() {
+  cout << oct << 255;       // 8进制
+  cout << dec << 255;       // 10进制
+  cout << hex << 255;       // 16进制
+  cout << showbase << 255;  // 显示进制前缀
+  cout << uppercase << 255; // 大写16进制 | 大写科学记数法E
+  cout << showpos << 255;   // 正数显示
+
+  cout << boolalpha << 0;   // true/false 替换 1/0
+  cout << noboolalpha << 0; // 恢复 1/0
+
+  cout << fixed << setprecision(10) << 0.00; // 固定小数位
+  cout << scientific << 0.00;                // 科学计数法
+  cout << showpoint << 0.00;                 // 总是显示小数点
+  //...
+}
