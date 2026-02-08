@@ -25,27 +25,62 @@ const int dy8[8] = {1, 0, -1, 1, -1, 1, 0, -1};
 const ll MOD = 998244353;
 
 struct chash {
-  static ull R() {
-    static ull rnd = chrono::steady_clock::now().time_since_epoch().count() ^
-                     (ull)random_device{}();
-    return rnd;
-  }
+  static ull seed;
   static ull sm64(ull x) {
     x += 0x9e3779b97f4a7c15;
     x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
     x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
     return x ^ (x >> 31);
   }
-  size_t operator()(ll x) const { return sm64(x + R()); }
-  size_t operator()(ull x) const { return sm64(x + R()); }
+  size_t operator()(ull x) const { return sm64(x + seed); }
+  size_t operator()(ll x) const { return sm64((ull)x + seed); }
   size_t operator()(const pl &p) const {
-    return sm64(p.first + R()) ^ (sm64(p.second + R()) >> 1);
+    return sm64(p.first + seed) ^ (sm64(p.second + seed) >> 1);
   }
-
   size_t operator()(const string &s) const {
-    ull h = R();
-    for (char c : s)
-      h = sm64(h ^ (ull)(unsigned char)c);
+    ull h = seed;
+    for (unsigned char c : s)
+      h = sm64(h ^ c);
+    return h;
+  }
+  size_t operator()(const vl &v) const {
+    ull h = seed ^ v.size();
+    for (ull x : v)
+      h ^= sm64(x + 0x9e3779b97f4a7c15 + (h << 6) + (h >> 2));
     return h;
   }
 };
+ull chash::seed = chrono::steady_clock::now().time_since_epoch().count();
+
+// struct chash {
+//   static ull R() {
+//     static ull rnd = chrono::steady_clock::now().time_since_epoch().count() ^
+//                      (ull)random_device{}();
+//     return rnd;
+//   }
+//   static ull sm64(ull x) {
+//     x += 0x9e3779b97f4a7c15;
+//     x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
+//     x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
+//     return x ^ (x >> 31);
+//   }
+//   size_t operator()(ll x) const { return sm64(x + R()); }
+//   size_t operator()(ull x) const { return sm64(x + R()); }
+//   size_t operator()(const pl &p) const {
+//     return sm64(p.first + R()) ^ (sm64(p.second + R()) >> 1);
+//   }
+//
+//   size_t operator()(const string &s) const {
+//     ull h = R();
+//     for (char c : s)
+//       h = sm64(h ^ (ull)(unsigned char)c);
+//     return h;
+//   }
+//
+//   size_t operator()(const vl &v) const {
+//     ull h = R();
+//     for (auto &x : v)
+//       h = sm64(h ^ sm64(x + R()));
+//     return h;
+//   }
+// };
