@@ -4,14 +4,14 @@
 #define REPD(i, n) for (ll i = (ll)(n) - 1; i >= 0; i--)
 
 using namespace std;
-typedef __int128 i128;
-typedef long long ll;
-typedef unsigned long long ull;
-typedef pair<ll, ll> pl;
-typedef vector<ll> vl;
-typedef vector<vl> vvl;
-typedef vector<vvl> vvvl;
-typedef vector<pl> vpl;
+using i128 = __int128;
+using ll = long long;
+using ull = unsigned long long;
+using pl = pair<ll, ll>;
+using vpl = vector<pl>;
+using vl = vector<ll>;
+using vvl = vector<vl>;
+using vvvl = vector<vvl>;
 const ll MAX = LONG_LONG_MAX;
 const ll MIN = LONG_LONG_MIN;
 const int INF = 1e9;
