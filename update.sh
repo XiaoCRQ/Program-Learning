@@ -6,3 +6,4 @@ for file in $(git diff --cached --name-only); do
   fi
 done
 git commit -m "${1:-"Update"}"
+git push
