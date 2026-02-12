@@ -1,7 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const string chars[] = {"O", "H"};
+const string head =
+    R"(//
+// ██╗  ██╗██╗ █████╗  ██████╗  ██████╗██████╗  ██████╗
+// ╚██╗██╔╝██║██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔═══██╗
+//  ╚███╔╝ ██║███████║██║   ██║██║     ██████╔╝██║   ██║
+//  ██╔██╗ ██║██╔══██║██║   ██║██║     ██╔══██╗██║▄▄ ██║
+// ██╔╝ ██╗██║██║  ██║╚██████╔╝╚██████╗██║  ██║╚██████╔╝
+// ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝ ╚══██═╝
+//)";
+
+const string chars[] = {"N", "M"};
 const int LEN_N = 10;
 
 /* 去除 // 注释 */
@@ -28,12 +38,11 @@ string normalize_line(const string &line) {
 }
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
-
+  cin.tie(0)->ios::sync_with_stdio(0);
   vector<string> def;
   vector<string> file; // ← 改为按“行字符块”
   string line;
+  cout << head << '\n';
 
   /* 1. 读取 + 分类 */
   while (getline(cin, line)) {

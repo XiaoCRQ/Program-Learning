@@ -6,6 +6,16 @@ const int LEN_N = 10;
 
 bool is_identifier_char(char c) { return isalnum(c) || c == '_'; }
 
+const string head =
+    R"(//
+// ██╗  ██╗██╗ █████╗  ██████╗  ██████╗██████╗  ██████╗
+// ╚██╗██╔╝██║██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔═══██╗
+//  ╚███╔╝ ██║███████║██║   ██║██║     ██████╔╝██║   ██║
+//  ██╔██╗ ██║██╔══██║██║   ██║██║     ██╔══██╗██║▄▄ ██║
+// ██╔╝ ██╗██║██║  ██║╚██████╔╝╚██████╗██║  ██║╚██████╔╝
+// ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝ ╚══██═╝
+//)";
+
 /* C++ 常用运算符集合（最长优先） */
 const vector<string> operators = {
     ">>=", "<<=", "->*", "->", "::", "++", "--", "==", "!=", "<=",
@@ -34,11 +44,10 @@ bool match_operator(const string &s, size_t pos, string &op) {
 }
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
-
+  cin.tie(0)->ios::sync_with_stdio(0);
   vector<string> def, file;
   string line;
+  cout << head << '\n';
 
   // 1. 读取内容，处理 #define 多行宏
   vector<string> raw_lines;
@@ -165,5 +174,4 @@ int main() {
     if (++cnt % LEN_N == 0)
       cout << "\n";
   }
-  return 0;
 }
