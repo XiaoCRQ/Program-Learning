@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const string chars[] = {"O", "H"};
-const int LEN_N = 10;
+const string chars[] = {"N", "M"};
 
 /* 去除 // 注释 */
 string remove_comment(string s) {
@@ -12,27 +11,12 @@ string remove_comment(string s) {
   return s;
 }
 
-/* 压缩空格（token 间保留一个空格） */
-string normalize_line(const string &line) {
-  stringstream ss(line);
-  string tok, res;
-  bool first = true;
-
-  while (ss >> tok) {
-    if (!first)
-      res += ' ';
-    res += tok;
-    first = false;
-  }
-  return res;
-}
-
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
   vector<string> def;
-  vector<string> file; // ← 改为按“行字符块”
+  vector<vector<string>> file;
   string line;
 
   /* 1. 读取 + 分类 */
@@ -63,17 +47,26 @@ int main() {
       if (line.find_first_not_of(" \t\r\n") == string::npos)
         continue;
 
-      // 压缩空格 → 形成字符块
-      string normalized = normalize_line(line);
+      // 空格切分
+      stringstream ss(line);
+      vector<string> tokens;
+      string tok;
+      while (ss >> tok)
+        tokens.push_back(tok);
 
-      if (!normalized.empty())
-        file.push_back(normalized);
+      if (!tokens.empty())
+        file.push_back(tokens);
     }
   }
 
-  /* 2. 收集“行字符块” */
-  unordered_set<string> st(file.begin(), file.end());
-  map<string, string> mp;
+  /* 2. 收集 token */
+  set<string> st;
+  for (auto &row : file)
+    for (auto &x : row)
+      st.insert(x);
+
+  unordered_map<string, string> mp;
+
   int K = sizeof(chars) / sizeof(string);
   int N = st.size();
 
@@ -106,15 +99,21 @@ int main() {
   for (auto &d : def)
     cout << d << "\n";
 
-  /* 6. 输出映射（行块映射） */
+  /* 6. 输出映射 */
   for (auto &[k, v] : mp)
     cout << "#define " << v << " " << k << "\n";
 
-  /* 7. 输出 file（每行一个编码） */
+  /* 7. 输出 file（每行 5 个） */
   int cnt = 0;
-  for (auto &line_block : file) {
-    cout << mp[line_block] << " ";
-    if (++cnt % LEN_N == 0)
-      cout << '\n';
-  }
+  for (auto &row : file)
+    for (auto &x : row) {
+      cout << mp[x];
+      cnt++;
+      if (cnt == 5) {
+        cout << "\n";
+        cnt = 0;
+      } else {
+        cout << " ";
+      }
+    }
 }
