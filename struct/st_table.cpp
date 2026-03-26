@@ -10,7 +10,7 @@ inline ll query(const ll l, const ll r) {
 }
 void init(const vl &a) {
   st_size = a.size();
-  REP(i, st_size)
+  FOR(i, 0, st_size, 1)
   st[i][0] = a[i];
   for (ll i = 2; i <= st_size; i++)
     lg[i] = lg[i / 2] + 1;

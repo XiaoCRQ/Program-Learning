@@ -1,23 +1,19 @@
 #include "../t_head.h"
-vl manachar(const string &str) {
-  ll size = str.size() * 2 - 1;
-  string ans(size, '#');
-  vl d(size, 1);
-  REP(i, str.size())
-  ans[i * 2 + 1] = str[i];
+vl manacher(const string &str) {
+  string t(2 * str.size() + 1, '#');
+  for (ll i = 0; i < str.size(); i++)
+    t[i * 2 + 1] = str[i];
+  ll n = t.size();
+  vl d(n, 0);
   ll l = 0, r = -1;
-  auto loop = [&](ll x) {
-    ll mid = x;
-    x = d[x];
-    while (mid - x >= 0 && mid + x < size && str[mid + x] == str[mid - x])
-      x++;
-    return x;
-  };
-  REP(i, size) {
-    if (i < r)
-      d[i] = min(r - i, d[l + r - i]);
-    d[i] = loop(i);
-    l = i - d[i], r = i + d[i];
+  for (ll i = 0; i < n; i++) {
+    if (i <= r)
+      d[i] = min(d[l + r - i], r - i);
+    while (i - d[i] - 1 >= 0 && i + d[i] + 1 < n &&
+           t[i - d[i] - 1] == t[i + d[i] + 1])
+      d[i]++;
+    if (i + d[i] > r)
+      l = i - d[i], r = i + d[i];
   }
   return d;
 }

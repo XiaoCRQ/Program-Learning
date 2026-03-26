@@ -15,13 +15,13 @@ void init() {
 
 ll divisor_count(ll x) {
   ll cnt, res = 1;
-  REP(i, pcnt)
-  if (p[i] * p[i] <= x) {
-    cnt = 1;
-    while (x % p[i] == 0)
-      x /= p[i], cnt++;
-    res *= cnt;
-  } else
-    break;
+  for (ll i = 0; i < pcnt; i++)
+    if (p[i] * p[i] <= x) {
+      cnt = 1;
+      while (x % p[i] == 0)
+        x /= p[i], cnt++;
+      res *= cnt;
+    } else
+      break;
   return res * (x > 1 ? 2 : 1);
 }

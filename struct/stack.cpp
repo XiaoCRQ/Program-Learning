@@ -1,10 +1,10 @@
 #include "../t_head.h"
-template <typename opt> // 单调栈
-vl ms(const vl &a, opt &&op = [](ll &a, ll &b) { return a < b; }) {
+
+template <class Op = less<>> vl ms(const vl &a, Op op = Op()) {
   ll n = a.size();
-  vl res(n);
+  vl res(n, n - 1);
   stack<ll> st;
-  REP(i, n) {
+  FOR(i, 0, n, 1) {
     while (!st.empty() && op(a[i], a[st.top()]))
       res[st.top()] = i, st.pop();
     st.push(i);

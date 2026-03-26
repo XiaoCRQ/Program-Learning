@@ -8,11 +8,12 @@ ll FT[N], CC[N]; // 阶乘数组
 ll C(ll n, ll k) { return FT[n] * inv(FT[k]) % MOD * inv(FT[n - k]) % MOD; }
 void init_FT() {
   FT[0] = 1;
-  REP(i, N - 1) FT[i + 1] = FT[i] * (i + 1) % MOD;
+  for (ll i = 0; i < N - 1; i++)
+    FT[i + 1] = FT[i] * (i + 1) % MOD;
 }
 void init_CC(ll n) {
   init_inv(n);
   CC[0] = 1;
-  REP(i, n)
-  CC[i + 1] = CC[i] * (n - i) % MOD * INV[i + 1] % MOD;
+  for (ll i = 0; i < n; i++)
+    CC[i + 1] = CC[i] * (n - i) % MOD * INV[i + 1] % MOD;
 }

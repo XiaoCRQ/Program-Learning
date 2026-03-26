@@ -29,4 +29,7 @@ void tarjan(ll u = root) { // 默认 vis[root] = true
   if (vis[to[i]])
     query_lca[i ^ 1] = query_lca[i] = find(to[i]);
 }
-void tarjan_out(ll q) { REP(i, q) cout << query_lca << '\n'; }
+void tarjan_out(ll q) {
+  for (ll i = 0; i < q; i++)
+    cout << query_lca << '\n';
+}

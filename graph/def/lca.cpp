@@ -5,7 +5,8 @@ const ll LOGE = 20;
 ll Jump[NODE][LOGE];
 void JumpBuild(ll u = root) { // 默认 vis[root] = true
   ll x = h[u] ? lg2(h[u]) : 0;
-  REP(i, x) Jump[u][i + 1] = Jump[Jump[u][i]][i];
+  for (ll i = 0; i < x; i++)
+    Jump[u][i + 1] = Jump[Jump[u][i]][i];
   REPG(u)
   if (!vis[to[i]]) {
     pa[to[i]] = Jump[to[i]][0] = u, h[to[i]] = h[u] + 1;

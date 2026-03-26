@@ -11,7 +11,7 @@ void init() {
 }
 void insert(string &s) {
   ll idx = 0;
-  EACH(s) {
+  for (auto &it : s) {
     ll c = it - 'a';
     if (!trie[idx][c])
       trie[idx][c] = ++cnt;
@@ -21,7 +21,7 @@ void insert(string &s) {
 }
 bool find(string &s) {
   ll idx = 0;
-  EACH(s) {
+  for (auto &it : s) {
     ll c = it - 'a';
     if (!trie[idx][c])
       return false;
