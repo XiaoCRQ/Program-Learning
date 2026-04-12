@@ -10,14 +10,14 @@ using vvl = vector<vl>;
 using vvvl = vector<vvl>;
 const ll MAX = LONG_LONG_MAX;
 const ll MIN = LONG_LONG_MIN;
-const int INF = 1e9;
+const ll INF = 1e9;
 const ll LINF = 1e18;
 const double PI = acos(-1.0);
-const int MAXN = 1e6 + 5;
-const int dx4[4] = {1, -1, 0, 0};
-const int dy4[4] = {0, 0, 1, -1};
-const int dx8[8] = {1, 1, 1, 0, 0, -1, -1, -1};
-const int dy8[8] = {1, 0, -1, 1, -1, 1, 0, -1};
+const ll MAXN = 1e6 + 5;
+const ll dx4[4] = {1, -1, 0, 0};
+const ll dy4[4] = {0, 0, 1, -1};
+const ll dx8[8] = {1, 1, 1, 0, 0, -1, -1, -1};
+const ll dy8[8] = {1, 0, -1, 1, -1, 1, 0, -1};
 const ll MOD = 998244353;
 
 struct chash {

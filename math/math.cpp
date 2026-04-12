@@ -32,3 +32,15 @@ ll qpow(ll a, ll b, ll mod = MOD) {
   }
   return res;
 }
+
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+ll cpp_rand(ll l, ll r) { return std::uniform_int_distribution<ll>(l, r)(rng); }
+ll crand(ll l, ll r) { return rand() % (r - l + 1) + l; }
+
+// 洗牌算法
+vector<ll> sf(ll n) {
+  vector<ll> p(n);
+  iota(p.begin(), p.end(), 0);
+  shuffle(p.begin(), p.end(), rng);
+  return p;
+}

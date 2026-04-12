@@ -1,8 +1,5 @@
 #include "t_head.h"
-static inline void fast_io() {
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
-}
+static inline void fast_io() { cin.tie(0)->sync_with_stdio(0); }
 
 inline i128 i128_abs(i128 x) { return x < 0 ? -x : x; }
 

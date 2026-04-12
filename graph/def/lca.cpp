@@ -14,7 +14,7 @@ void JumpBuild(ll u = root) { // 默认 vis[root] = true
   }
 }
 
-ll lcd(ll u, ll v) {
+ll lca(ll u, ll v) {
   ll x, y;
   auto equal = [&](ll &a, ll &b) {
     while (h[a] > h[b])

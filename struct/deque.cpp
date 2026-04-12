@@ -1,10 +1,10 @@
 #include "../t_head.h"
 
-template <class Op = less<>> void mq(const vl &a, const ll size, Op op = Op()) {
+void mq(const vl &a, const ll size) {
   ll n = a.size();
   deque<ll> que;
-  FOR(i, 0, n, 1) {
-    while (!que.empty() && op(a[i], a[que.back()]))
+  for (ll i = 0; i < n; i++) {
+    while (!que.empty() && a[i] > a[que.back()])
       que.pop_back();
     que.push_back(i);
     while (!que.empty() && que.front() <= i - size)

@@ -1,27 +1,35 @@
 #include "../t_head.h"
-const ll PN = 31622 + 5; // sqrt(1e9 + 5)
-bitset<PN> is_prime;
-ll p[PN], pcnt = 0;
 
-void init() {
-  is_prime.set(), is_prime[0] = is_prime[1] = false;
-  for (ll i = 2; i * i < PN; ++i)
-    for (ll j = i * i; is_prime[i] && j < PN; j += i)
-      is_prime[j] = false;
-  for (ll i = 2; i < PN; ++i)
-    if (is_prime[i])
-      p[pcnt++] = i;
+vl linear_sieve(ll n) {
+  vector<bool> vis(n + 1);
+  vl res;
+  for (ll i = 2; i <= n; i++) {
+    if (!vis[i])
+      res.push_back(i);
+    for (auto it : res) {
+      if (i * it > n)
+        break;
+      vis[i * it] = true;
+      if (i % it == 0)
+        break;
+    }
+  }
+  return res;
 }
 
-ll divisor_count(ll x) {
-  ll cnt, res = 1;
-  for (ll i = 0; i < pcnt; i++)
-    if (p[i] * p[i] <= x) {
-      cnt = 1;
-      while (x % p[i] == 0)
-        x /= p[i], cnt++;
-      res *= cnt;
-    } else
+vl factorize(ll n, const vl primes) {
+  vl res;
+  for (ll p : primes) {
+    if (p * p > n)
       break;
-  return res * (x > 1 ? 2 : 1);
+    if (n % p == 0) {
+      ll cnt = 0;
+      while (n % p == 0)
+        n /= p, cnt++;
+      res.push_back(p);
+    }
+  }
+  if (n > 1)
+    res.push_back(n);
+  return res;
 }
