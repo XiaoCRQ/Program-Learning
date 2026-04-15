@@ -45,6 +45,7 @@ vector<ll> sf(ll n) {
   return p;
 }
 
+// 三分
 bool check(double m1, double m2) { return false; }
 double trisect(double l, double r) {
   double ans;
