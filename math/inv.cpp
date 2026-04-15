@@ -5,7 +5,7 @@ void init_inv(int n) {
   for (int i = 2; i <= n; i++)
     INV[i] = MOD - MOD / i * INV[MOD % i] % MOD;
 }
-ll inv(ll a) { return qpow(a, MOD - 2); }
+ll inv(ll a) { return qpow(a, MOD - 2); } // mod == prime
 ll exgcd(ll a, ll b, ll &x, ll &y) {
   if (b == 0) {
     x = 1, y = 0;
@@ -15,7 +15,7 @@ ll exgcd(ll a, ll b, ll &x, ll &y) {
   y -= a / b * x;
   return d;
 }
-ll inv_exgcd(ll a, ll mod = MOD) {
+ll inv_exgcd(ll a, ll mod = MOD) { // gcd == 1
   ll x, y;
   ll g = exgcd(a, mod, x, y);
   if (g != 1)

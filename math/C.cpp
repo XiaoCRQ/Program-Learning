@@ -17,3 +17,17 @@ void init_CC(ll n) {
   for (ll i = 0; i < n; i++)
     CC[i + 1] = CC[i] * (n - i) % MOD * INV[i + 1] % MOD;
 }
+
+// 多重集全排列
+ll ccc(vl a, ll mod) {
+  ll res, n = 0;
+  for (auto &it : a)
+    n += it;
+  vl fact(n + 1, 1);
+  for (ll i = 1; i <= N; i++)
+    fact[i] = fact[i - 1] * i % mod;
+  res = fact[n];
+  for (auto &it : a)
+    res *= inv_exgcd(fact[it], mod), res %= mod;
+  return res;
+}

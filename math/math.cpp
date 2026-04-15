@@ -44,3 +44,17 @@ vector<ll> sf(ll n) {
   shuffle(p.begin(), p.end(), rng);
   return p;
 }
+
+bool check(double m1, double m2) { return false; }
+double trisect(double l, double r) {
+  double ans;
+  ll cnt = 0;
+  while (cnt++ < 200) {
+    double m1 = l + (r - l) / 3, m2 = r - (r - l) / 3;
+    if (check(m1, m2))
+      r = m2;
+    else
+      l = m1;
+  }
+  return ans;
+}
