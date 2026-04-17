@@ -22,15 +22,15 @@ ll get(ll l, ll r) { return prefix(r + 1) - prefix(l); }
 void init() { // 1-idx
   memset(t, 0, sizeof t);
   ll x;
-  for (ll i = 0; i < n; i++) {
+  for (ll i = 1; i <= n; i++) {
     cin >> x;
-    t[0][i + 1] += x, t[1][i + 1] += x * (i + 1);
-    if (i + 2 <= n)
-      t[0][i + 2] -= x, t[1][i + 2] -= x * (i + 2);
+    t[0][i] += x, t[1][i] += x * i;
+    if (i + 1 <= n)
+      t[0][i + 1] -= x, t[1][i + 1] -= x * (i + 1);
   }
-  for (ll i = 0; i < n; i++) {
-    ll j = (i + 1) + lowbit(i + 1);
+  for (ll i = 1; i <= n; i++) {
+    ll j = i + lowbit(i);
     if (j <= n)
-      t[0][j] += t[0][i + 1], t[1][j] += t[1][i + 1];
+      t[0][j] += t[0][i], t[1][j] += t[1][i];
   }
 }

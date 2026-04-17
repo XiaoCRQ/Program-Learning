@@ -5,7 +5,7 @@ ll sum[N << 2];
 ll add[N << 2];
 inline ll s_l(ll p) { return p * 2 + 1; }
 inline ll s_r(ll p) { return p * 2 + 2; }
-inline ll mid(ll l, ll r) { return l + (r - l) / 2; }
+inline ll mid(ll l, ll r) { return (r + l) / 2; }
 ll push_down(ll s, ll t, ll p) {
   ll m = mid(s, t);
   auto up = [&](ll idx, ll size) {
@@ -49,13 +49,3 @@ void init(ll s = 0, ll t = n - 1, ll p = 0) {
     sum[p] = sum[s_l(p)] + sum[s_r(p)];
   }
 }
-
-class node {
-  unordered_map<ll, ll> index;
-  queue<ll> recycle;
-  vl data;
-
-public:
-  void insert() {}
-  void erase() {}
-};
