@@ -1,7 +1,7 @@
 #include "../t_head.h"
 
-ll pack(ll t, ll n, vl &w, vl &v, vl &k) {
-  vl dp(t + 1, 0);
+ll pack(ll t, ll n, vector<ll> &w, vector<ll> &v, vector<ll> &k) {
+  vector<ll> dp(t + 1, 0);
 
   for (ll i = 0; i < n; i++) {
     // 01 背包

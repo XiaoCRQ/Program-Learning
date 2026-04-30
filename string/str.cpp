@@ -1,27 +1,26 @@
 #include "../t_head.h"
-#include <functional>
-vl manacher(const string &str) {
+vector<ll> manacher(const string &str) {
   string t(2 * str.size() + 1, '#');
   for (ll i = 0; i < str.size(); i++)
     t[i * 2 + 1] = str[i];
   ll n = t.size();
-  vl d(n, 0);
+  vector<ll> res(n, 0);
   ll l = 0, r = -1;
   for (ll i = 0; i < n; i++) {
     if (i <= r)
-      d[i] = min(d[l + r - i], r - i);
-    while (i - d[i] - 1 >= 0 && i + d[i] + 1 < n &&
-           t[i - d[i] - 1] == t[i + d[i] + 1])
-      d[i]++;
-    if (i + d[i] > r)
-      l = i - d[i], r = i + d[i];
+      res[i] = min(res[l + r - i], r - i);
+    while (i - res[i] - 1 >= 0 && i + res[i] + 1 < n &&
+           t[i - res[i] - 1] == t[i + res[i] + 1])
+      res[i]++;
+    if (i + res[i] > r)
+      l = i - res[i], r = i + res[i];
   }
-  return d;
+  return res;
 }
 
-vl string_prefix(const string &s) {
+vector<ll> string_prefix(const string &s) {
   ll n = s.size();
-  vl res(n);
+  vector<ll> res(n);
   for (ll i = 1, j = 0; i < n; j = res[++i - 1]) {
     while (j > 0 && s[i] != s[j])
       j = res[j - 1];
@@ -30,14 +29,14 @@ vl string_prefix(const string &s) {
   return res;
 }
 
-vl kmp(const string &text, const string &s) {
-  vl res = string_prefix(s + "#" + text);
+vector<ll> kmp(const string &text, const string &s) {
+  vector<ll> res = string_prefix(s + "#" + text);
   return {res.begin() + s.size() + 1, res.end()};
 }
 
-vl exkmp(const string &s) {
+vector<ll> exkmp(const string &s) {
   ll n = s.size();
-  vl z(n);
+  vector<ll> z(n);
   for (ll i = 1, l = 0, r = 0; i < n; i++) {
     if (i <= r && z[i - l] < r - i + 1)
       z[i] = z[i - 1];

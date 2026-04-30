@@ -1,51 +1,63 @@
-#include "../../t_head.h"
-const ll N = 2e5 + 5;
-ll n, val[N];
-ll sum[N << 2];
-ll add[N << 2];
-inline ll s_l(ll p) { return p * 2 + 1; }
-inline ll s_r(ll p) { return p * 2 + 2; }
-inline ll mid(ll l, ll r) { return (r + l) / 2; }
-ll push_down(ll s, ll t, ll p) {
-  ll m = mid(s, t);
-  auto up = [&](ll idx, ll size) {
-    sum[idx] += add[p] * size, add[idx] += add[p];
-  };
-  auto flag = [&]() -> bool { return add[p]; };
-  if (flag() && s != t) {
-    up(s_l(p), m - s + 1);
-    up(s_r(p), t - m);
-    add[p] = 0;
+#include "creat.cpp"
+inline ll mid(ll l, ll r) { return (l + r) >> 1; }
+struct sg {
+  vector<ll> lazy;
+  tree t;
+  ll n;
+
+  sg(vector<ll> &val) : n(val.size()) {
+    lazy.assign(1, 0);
+    build(val, 0, n - 1, t.add());
   }
-  return m;
-}
-void update(ll l, ll r, ll c, ll s = 0, ll t = n - 1, ll p = 0) {
-  if (l <= s && t <= r) {
-    sum[p] += (t - s + 1) * c, add[p] += c;
-    return;
+
+  void build(vector<ll> &val, ll l, ll r, ll p) {
+    if (l == r) {
+      t.data[p] = val[l];
+      return;
+    }
+    ll m = mid(l, r);
+    build(val, l, m, t.left[p] = t.add());
+    build(val, m + 1, r, t.right[p] = t.add());
+    t.data[p] = t.ld(p) + t.rd(p);
   }
-  ll m = push_down(s, t, p);
-  if (l <= m)
-    update(l, r, c, s, m, s_l(p));
-  if (r > m)
-    update(l, r, c, m + 1, t, s_r(p));
-  sum[p] = sum[s_l(p)] + sum[s_r(p)];
-}
-ll get(ll l, ll r, ll s = 0, ll t = n - 1, ll p = 0) {
-  if (l <= s && t <= r)
-    return sum[p];
-  ll m = push_down(s, t, p), ans = 0;
-  ans += l <= m ? get(l, r, s, m, s_l(p)) : 0;
-  ans += r > m ? get(l, r, m + 1, t, s_r(p)) : 0;
-  return ans;
-}
-void init(ll s = 0, ll t = n - 1, ll p = 0) {
-  add[p] = 0;
-  if (s == t)
-    sum[p] = val[s];
-  else {
-    ll m = mid(s, t);
-    init(s, m, s_l(p)), init(m + 1, t, s_r(p));
-    sum[p] = sum[s_l(p)] + sum[s_r(p)];
+
+  void push_down(ll l, ll r, ll p) {
+    if (l == r || !lazy[p])
+      return;
+    ll m = mid(l, r);
+    auto up = [&](ll sz, ll sp) {
+      t.data[sp] += lazy[p] * sz;
+      lazy[sp] += lazy[p];
+    };
+    up(m - l + 1, t.left[p]);
+    up(r - m, t.right[p]);
+    lazy[p] = 0;
   }
-}
+
+  void update(ll L, ll R, ll l, ll r, ll c, ll p = 0) {
+    if (L <= l && r <= R) {
+      t.data[p] += (r - l + 1) * c;
+      lazy[p] += c;
+      return;
+    }
+    push_down(l, r, p);
+    ll m = mid(l, r);
+    if (L <= m)
+      update(L, R, l, m, c, t.left[p]);
+    if (R > m)
+      update(L, R, m + 1, r, c, t.right[p]);
+    t.data[p] = t.ld(p) + t.rd(p);
+  }
+
+  ll query(ll L, ll R, ll l, ll r, ll p = 0) {
+    if (L <= l && r <= R)
+      return t.data[p];
+    push_down(l, r, p);
+    ll m = mid(l, r), res = 0;
+    if (L <= m)
+      res += query(L, R, l, m, t.left[p]);
+    if (R > m)
+      res += query(L, R, m + 1, r, t.right[p]);
+    return res;
+  }
+};

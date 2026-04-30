@@ -1,8 +1,8 @@
 #include "../t_head.h"
 
-vl ms(const vl &a) {
+vector<ll> ms(const vector<ll> &a) {
   ll n = a.size();
-  vl res(n, n - 1);
+  vector<ll> res(n, n - 1);
   stack<ll> st;
   for (ll i = 0; i < n; i++) {
     while (!st.empty() && a[i] < a[st.top()])

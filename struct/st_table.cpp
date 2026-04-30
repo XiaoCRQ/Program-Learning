@@ -8,7 +8,7 @@ inline ll query(const ll l, const ll r) {
   ll m = lg[r - l + 1];
   return max(st[l][m], st[r - (1LL << m) + 1][m]);
 }
-void init(const vl &a) {
+void init(const vector<ll> &a) {
   st_size = a.size();
   for (ll i = 0; i < st_size; i++)
     st[i][0] = a[i];

@@ -3,10 +3,10 @@
 // adjacent_difference(a.begin(),a.end(),b.begin());
 
 // ===================== 二维差分 ===================== //
-vvl diff2(vvl &a) {
+vector<vector<ll>> diff2(vector<vector<ll>> &a) {
   int n = a.size();
   int m = a[0].size();
-  vvl d(n + 2, vl(m + 2, 0)); // 多开 1 维，边界安全
+  vector<vector<ll>> d(n + 2, vector<ll>(m + 2, 0)); // 多开 1 维，边界安全
   for (ll i = 1; i <= n; i++)
     for (ll j = 1; j <= m; j++)
       d[i][j] =
@@ -15,7 +15,7 @@ vvl diff2(vvl &a) {
 }
 
 // 矩形区间加 [x1,y1]~[x2,y2] += val, 0-indexed
-void add_rect(vvl &d, int x1, int y1, int x2, int y2, ll val) {
+void add_rect(vector<vector<ll>> &d, int x1, int y1, int x2, int y2, ll val) {
   x1++, y1++, x2++, y2++;
   d[x1][y1] += val;
   d[x2 + 1][y1] -= val;
@@ -24,11 +24,13 @@ void add_rect(vvl &d, int x1, int y1, int x2, int y2, ll val) {
 }
 
 // ===================== 三维差分 ===================== //
-vvvl diff3(vvvl &a) {
+vector<vector<vector<ll>>> diff3(vector<vector<vector<ll>>> &a) {
   int n = a.size();
   int m = a[0].size();
   int p = a[0][0].size();
-  vvvl d(n + 2, vvl(m + 2, vl(p + 2, 0))); // 多开 1 维，边界安全
+  vector<vector<vector<ll>>> d(
+      n + 2,
+      vector<vector<ll>>(m + 2, vector<ll>(p + 2, 0))); // 多开 1 维，边界安全
   for (ll i = 1; i <= n; i++)
     for (ll j = 1; j <= m; j++)
       for (ll k = 1; k <= p; k++)
@@ -45,7 +47,14 @@ vvvl diff3(vvvl &a) {
 }
 
 // 立方体区间加 [x1,y1,z1]~[x2,y2,z2] += val, 0-indexed
-void add_cube(vvvl &d, int x1, int y1, int z1, int x2, int y2, int z2, ll val) {
+void add_cube(vector<vector<vector<ll>>> &d,
+              int x1,
+              int y1,
+              int z1,
+              int x2,
+              int y2,
+              int z2,
+              ll val) {
   x1++, y1++, z1++, x2++, y2++, z2++;
   d[x1][y1][z1] += val;
   d[x2 + 1][y1][z1] -= val;
@@ -58,9 +67,9 @@ void add_cube(vvvl &d, int x1, int y1, int z1, int x2, int y2, int z2, ll val) {
 }
 
 // 恢复三维矩阵
-vvvl recover3(vvvl &d) {
+vector<vector<vector<ll>>> recover3(vector<vector<vector<ll>>> &d) {
   int n = d.size() - 1, m = d[0].size() - 1, p = d[0][0].size() - 1;
-  vvvl a(n, vvl(m, vl(p, 0)));
+  vector<vector<vector<ll>>> a(n, vector<vector<ll>>(m, vector<ll>(p, 0)));
   for (ll i = 1; i <= n; i++)
     for (ll j = 1; j <= m; j++)
       for (ll k = 1; k <= p; k++)

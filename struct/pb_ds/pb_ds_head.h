@@ -1,6 +1,5 @@
 #include "../../t_head.h"
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/priority_queue.hpp>
+#include "bits/extc++.h"
 using namespace __gnu_pbds;
 
 // tag list

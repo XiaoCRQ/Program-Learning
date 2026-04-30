@@ -1,8 +1,8 @@
 #include "../t_head.h"
 
-vl linear_sieve(ll n) {
+vector<ll> linear_sieve(ll n) {
   vector<bool> vis(n + 1);
-  vl res;
+  vector<ll> res;
   for (ll i = 2; i <= n; i++) {
     if (!vis[i])
       res.push_back(i);
@@ -17,8 +17,8 @@ vl linear_sieve(ll n) {
   return res;
 }
 
-vl factorize(ll n, const vl primes) {
-  vl res;
+vector<ll> factorize(ll n, const vector<ll> primes) {
+  vector<ll> res;
   for (ll p : primes) {
     if (p * p > n)
       break;

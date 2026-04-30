@@ -1,15 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-using i128 = __int128;
 using ll = long long;
 using ull = unsigned long long;
-using pl = pair<ll, ll>;
-using vpl = vector<pl>;
-using vl = vector<ll>;
-using vvl = vector<vl>;
-using vvvl = vector<vvl>;
-const ll MAX = LONG_LONG_MAX;
-const ll MIN = LONG_LONG_MIN;
+const ll MAX = LLONG_MAX;
+const ll MIN = LLONG_MIN;
 const ll INF = 1e9;
 const ll LINF = 1e18;
 const double PI = acos(-1.0);
@@ -30,7 +24,7 @@ struct chash {
   }
   size_t operator()(ull x) const { return sm64(x + seed); }
   size_t operator()(ll x) const { return sm64((ull)x + seed); }
-  size_t operator()(const pl &p) const {
+  size_t operator()(const pair<ll, ll> &p) const {
     return sm64(p.first + seed) ^ (sm64(p.second + seed) >> 1);
   }
   size_t operator()(const string &s) const {
@@ -39,7 +33,7 @@ struct chash {
       h = sm64(h ^ c);
     return h;
   }
-  size_t operator()(const vl &v) const {
+  size_t operator()(const vector<ll> &v) const {
     ull h = seed ^ v.size();
     for (ull x : v)
       h ^= sm64(x + 0x9e3779b97f4a7c15 + (h << 6) + (h >> 2));

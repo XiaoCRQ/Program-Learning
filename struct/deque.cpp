@@ -1,6 +1,6 @@
 #include "../t_head.h"
 
-void mq(const vl &a, const ll size) {
+void mq(const vector<ll> &a, const ll size) {
   ll n = a.size();
   deque<ll> que;
   for (ll i = 0; i < n; i++) {

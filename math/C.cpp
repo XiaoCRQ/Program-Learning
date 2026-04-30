@@ -19,11 +19,11 @@ void init_CC(ll n) {
 }
 
 // 多重集全排列
-ll ccc(vl a, ll mod) {
+ll ccc(vector<ll> a, ll mod) {
   ll res, n = 0;
   for (auto &it : a)
     n += it;
-  vl fact(n + 1, 1);
+  vector<ll> fact(n + 1, 1);
   for (ll i = 1; i <= N; i++)
     fact[i] = fact[i - 1] * i % mod;
   res = fact[n];
