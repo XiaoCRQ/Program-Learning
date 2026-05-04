@@ -2,13 +2,6 @@
 // inline ll gcd(ll a, ll b) { return b == 0 ? a : gcd(b, a % b); }
 // inline ll lcm(ll a, ll b) { return a / gcd(a, b) * b; }
 // c++17 -> 支持 gcd(..) and lcm(..)
-inline ll R(ll l, ll r) {
-  static mt19937_64 rng(random_device{}());
-  return uniform_int_distribution<ll>(l, r)(rng);
-}
-void solve() {}
-inline ll max3(ll a, ll b, ll c) { return max(a, max(b, c)); }
-inline ll min3(ll a, ll b, ll c) { return min(a, min(b, c)); }
 
 inline ll qadd(ll a, ll b, ll mod = MOD) {
   a %= mod, b %= mod;
@@ -33,8 +26,8 @@ ll qpow(ll a, ll b, ll mod = MOD) {
   return res;
 }
 
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-ll cpp_rand(ll l, ll r) { return std::uniform_int_distribution<ll>(l, r)(rng); }
+mt19937 rng(time(0));
+ll cpp_rand(ll l, ll r) { return uniform_int_distribution<ll>(l, r)(rng); }
 ll crand(ll l, ll r) { return rand() % (r - l + 1) + l; }
 
 // 洗牌算法
@@ -58,4 +51,28 @@ double trisect(double l, double r) {
       l = m1;
   }
   return ans;
+}
+
+// 区间合并
+void combine() {
+  ll q;
+  cin >> q;
+  map<ll, ll> mp;
+  while (q--) {
+    ll l, r;
+    cin >> l >> r;
+    auto it = mp.lower_bound(l);
+    if (it != mp.begin())
+      --it;
+    while (it != mp.end() && it->first <= r) {
+      if (it->second < l) {
+        ++it;
+        continue;
+      }
+      l = min(l, it->first);
+      r = max(r, it->second);
+      it = mp.erase(it);
+    }
+    mp[l] = r;
+  }
 }

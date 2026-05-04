@@ -6,8 +6,8 @@
 
 // ===================== 二维前缀和 ===================== //
 vector<vector<ll>> prefix_sum(vector<vector<ll>> &a) {
-  int n = a.size();
-  int m = a[0].size();
+  ll n = a.size();
+  ll m = a[0].size();
   vector<vector<ll>> b(n + 1, vector<ll>(m + 1, 0)); // b[0][*] b[*][0] 自动 0
   for (ll i = 1; i <= n; i++)
     for (ll j = 1; j <= m; j++)
@@ -16,16 +16,16 @@ vector<vector<ll>> prefix_sum(vector<vector<ll>> &a) {
 }
 
 // 查询二维区间 [x1,y1]~[x2,y2]，0-indexed
-ll range_sum(vector<vector<ll>> &b, int x1, int y1, int x2, int y2) {
+ll range_sum(vector<vector<ll>> &b, ll x1, ll y1, ll x2, ll y2) {
   x1++, y1++, x2++, y2++;
   return b[x2][y2] - b[x1 - 1][y2] - b[x2][y1 - 1] + b[x1 - 1][y1 - 1];
 }
 
 // ===================== 三维前缀和 ===================== //
 vector<vector<vector<ll>>> prefix_sum(vector<vector<vector<ll>>> &a) {
-  int n = a.size();
-  int m = a[0].size();
-  int p = a[0][0].size();
+  ll n = a.size();
+  ll m = a[0].size();
+  ll p = a[0][0].size();
   vector<vector<vector<ll>>> b(
       n + 1,
       vector<vector<ll>>(m + 1, vector<ll>(p + 1, 0))); // b[0][*][*] 自动 0
@@ -39,13 +39,8 @@ vector<vector<vector<ll>>> prefix_sum(vector<vector<vector<ll>>> &a) {
 }
 
 // 查询三维区间 [x1,y1,z1] ~ [x2,y2,z2]，0-indexed
-ll range_sum(vector<vector<vector<ll>>> &b,
-             int x1,
-             int y1,
-             int z1,
-             int x2,
-             int y2,
-             int z2) {
+ll range_sum(
+    vector<vector<vector<ll>>> &b, ll x1, ll y1, ll z1, ll x2, ll y2, ll z2) {
   x1++, y1++, z1++, x2++, y2++, z2++;
   return b[x2][y2][z2] - b[x1 - 1][y2][z2] - b[x2][y1 - 1][z2] -
          b[x2][y2][z1 - 1] + b[x1 - 1][y1 - 1][z2] + b[x1 - 1][y2][z1 - 1] +

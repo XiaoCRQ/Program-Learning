@@ -1,9 +1,8 @@
 #include "../../t_head.h"
+ll lowbit(ll x) { return x & (-x); }
 struct tree_arr {
   vector<ll> t[2];
   ll n;
-
-  inline ll lowbit(ll x) { return x & (-x); }
 
   tree_arr(vector<ll> &val) {
     n = val.size();
