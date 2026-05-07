@@ -3,8 +3,8 @@
 struct dsu {
   vector<ll> pa, sz;
   void init(ll n) {
-    pa.resize(n + 1);
-    sz.assign(n + 1, 1);
+    pa.resize(n);
+    sz.assign(n, 1);
     iota(pa.begin(), pa.end(), 0);
   }
   ll find(ll u) { return pa[u] == u ? u : pa[u] = find(pa[u]); }
@@ -24,7 +24,7 @@ struct dsu2 {
   ll idx;
   void init(ll n) {
     recycle = {};
-    sn.assign(n + 1, -1);
+    sn.assign(n, -1);
     pa.clear();
     sz.clear();
     idx = 0;
