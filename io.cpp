@@ -1,7 +1,7 @@
 #include "t_head.h"
 static inline void fast_io() { cin.tie(0)->sync_with_stdio(0); }
 
-inline i128 i128_abs(i128 x) { return x < 0 ? -x : x; }
+inline __int128_t i128_abs(__int128_t x) { return x < 0 ? -x : x; }
 
 inline ll in() {
   ll x = 0, f = 1;
@@ -26,7 +26,7 @@ inline void out(ll x) {
   putchar(x % 10 + '0');
 }
 
-inline void out(pl x) {
+inline void out(pair<ll, ll> x) {
   out(x.first);
   putchar(' ');
   out(x.second);

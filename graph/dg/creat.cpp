@@ -4,8 +4,8 @@ struct G {
   ll idx;
   void init(ll n) { head.assign(n, -1), idx = 0; }
   void add(ll u, ll v) {
-    to.push_back(v);
     nxt.push_back(head[u]);
+    to.push_back(v);
     head[u] = idx++;
   }
 };

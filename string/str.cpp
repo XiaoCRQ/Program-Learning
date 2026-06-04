@@ -21,7 +21,7 @@ vector<ll> manacher(const string &str) {
 vector<ll> string_prefix(const string &s) {
   ll n = s.size();
   vector<ll> res(n);
-  for (ll i = 1, j = 0; i < n; j = res[++i - 1]) {
+  for (ll i = 1, j = 0; i < n; j = res[i++]) {
     while (j > 0 && s[i] != s[j])
       j = res[j - 1];
     res[i] = j + (s[i] == s[j]);
@@ -65,3 +65,45 @@ void sc(const string &text, const string &str) {
       cout << distance(text.begin(), it);
   }
 }
+
+namespace str_hash {
+const ll N = 2e5;
+const ll B = 131;
+vector<ll> bp;
+void get_bp(ll mod) {
+  bp.assign(N, 1);
+  for (ll i = 1; i < N; i++)
+    bp[i] = bp[i - 1] * B % mod;
+}
+vector<ll> get_init(string &s, ll mod) {
+  ll n = s.size();
+  vector<ll> res(n + 1);
+  for (ll i = 1; i <= n; i++)
+    res[i] = (res[i - 1] * B + s[i - 1]) % mod;
+  return res;
+}
+ll get(vector<ll> &hash, vector<ll> &bp, ll mod, ll l, ll r) {
+  return ((hash[r] - hash[l - 1] * bp[r - l + 1]) % mod + mod) % mod;
+}
+
+// for example
+void loop() {
+  ll mod = 1e9 + 7, q;
+  string s, t;
+  cin >> s >> q;
+  t = string(s.rbegin(), s.rend());
+  get_bp(mod);
+  auto hash = get_init(s, mod);
+  auto hash_rev = get_init(t, mod);
+  while (q--) {
+    ll l, r;
+    cin >> l >> r;
+    auto t1 = get(hash, bp, mod, l, r);
+    auto t2 = get(hash_rev, bp, mod, s.size() - r + 1, s.size() - l + 1);
+    if (t1 == t2)
+      cout << "Yes\n";
+    else
+      cout << "No\n";
+  }
+}
+} // namespace str_hash
