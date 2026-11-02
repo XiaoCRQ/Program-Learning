@@ -1,4 +1,4 @@
-#include "../../t_head.h"
+#include "../t_head.h"
 ll lowbit(ll x) { return x & (-x); }
 struct tree_arr {
   vector<ll> t[2];
@@ -36,4 +36,30 @@ struct tree_arr {
 
   ll prefix(ll x) { return x * getsum(t[0], x - 1) - getsum(t[1], x - 1); }
   ll get(ll l, ll r) { return prefix(r + 1) - prefix(l); }
+};
+
+struct tree_arr_single {
+  vector<ll> t;
+  ll n;
+  tree_arr_single(vector<ll> &val) {
+    n = val.size();
+    t.assign(n + 1, 0);
+    for (ll i = 1; i <= n; i++) {
+      t[i] += val[i - 1];
+      ll j = i + lowbit(i);
+      if (j <= n)
+        t[j] += t[i];
+    }
+  }
+  void add(ll k, ll v) {
+    while (k <= n)
+      t[k] += v, k += lowbit(k);
+  }
+  ll prefix(ll x) {
+    ll ret = 0;
+    while (x)
+      ret += t[x], x -= lowbit(x);
+    return ret;
+  }
+  ll get(ll l, ll r) { return prefix(r) - prefix(l - 1); }
 };

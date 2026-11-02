@@ -2,11 +2,7 @@
 
 struct dsu {
   vector<ll> pa, sz;
-  void init(ll n) {
-    pa.resize(n);
-    sz.assign(n, 1);
-    iota(pa.begin(), pa.end(), 0);
-  }
+  dsu(ll n) : pa(n), sz(n, 1) { iota(pa.begin(), pa.end(), 0); }
   ll find(ll u) { return pa[u] == u ? u : pa[u] = find(pa[u]); }
   void unite(ll u, ll v) {
     u = find(u), v = find(v);

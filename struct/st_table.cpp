@@ -18,3 +18,27 @@ void init(const vector<ll> &a) {
     for (ll i = 0; i + (1LL << j) <= st_size; i++)
       st[i][j] = max(st[i][j - 1], st[i + (1LL << (j - 1))][j - 1]);
 }
+
+struct ST {
+  static constexpr ll logN = 25;
+  vector<array<ll, logN>> st;
+  vector<ll> lg;
+  ll n;
+  ST(const vector<ll> &a) { init(a); }
+  void init(const vector<ll> &a) {
+    n = a.size();
+    st.assign(n, {});
+    lg.assign(n + 1, 0);
+    for (ll i = 0; i < n; i++)
+      st[i][0] = a[i];
+    for (ll i = 2; i <= n; i++)
+      lg[i] = lg[i >> 1] + 1;
+    for (ll j = 1; j < logN; j++)
+      for (ll i = 0; i + (1LL << j) <= n; i++)
+        st[i][j] = max(st[i][j - 1], st[i + (1LL << (j - 1))][j - 1]);
+  }
+  inline ll query(ll l, ll r) {
+    ll k = lg[r - l + 1];
+    return max(st[l][k], st[r - (1LL << k) + 1][k]);
+  }
+};

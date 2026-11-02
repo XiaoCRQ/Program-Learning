@@ -1,4 +1,4 @@
-#include "../t_head.h"
+#include "../../t_head.h"
 
 ll pack(ll t, ll n, vector<ll> &w, vector<ll> &v, vector<ll> &k) {
   vector<ll> dp(t + 1, 0);

@@ -46,3 +46,17 @@ ll range_sum(
          b[x2][y2][z1 - 1] + b[x1 - 1][y1 - 1][z2] + b[x1 - 1][y2][z1 - 1] +
          b[x2][y1 - 1][z1 - 1] - b[x1 - 1][y1 - 1][z1 - 1];
 }
+
+ll xor_rang(ll n) {
+  switch (n % 4) {
+  case 0:
+    return n;
+  case 1:
+    return 1;
+  case 2:
+    return n + 1;
+  case 3:
+    return 0;
+  }
+  return 0;
+};

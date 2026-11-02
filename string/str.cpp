@@ -18,19 +18,19 @@ vector<ll> manacher(const string &str) {
   return res;
 }
 
-vector<ll> string_prefix(const string &s) {
+vector<ll> str_nxt(const string &s) {
   ll n = s.size();
-  vector<ll> res(n);
-  for (ll i = 1, j = 0; i < n; j = res[i++]) {
+  vector<ll> nxt(n);
+  for (ll i = 1, j = 0; i < n; j = nxt[i++]) {
     while (j > 0 && s[i] != s[j])
-      j = res[j - 1];
-    res[i] = j + (s[i] == s[j]);
+      j = nxt[j - 1];
+    nxt[i] = j + (s[i] == s[j]);
   }
-  return res;
+  return nxt;
 }
 
 vector<ll> kmp(const string &text, const string &s) {
-  vector<ll> res = string_prefix(s + "#" + text);
+  vector<ll> res = str_nxt(s + "#" + text);
   return {res.begin() + s.size() + 1, res.end()};
 }
 
@@ -51,18 +51,18 @@ vector<ll> exkmp(const string &s) {
   return z;
 }
 
-void sc(const string &text, const string &str) {
+void sc(const string &s, const string &t) {
   { // boyer_moore_searcher O(n/m) 最坏O(nm)
-    auto it = search(text.begin(), text.end(),
-                     boyer_moore_searcher(str.begin(), str.end()));
-    if (it != text.end())
-      cout << distance(text.begin(), it);
+    auto it =
+        search(s.begin(), s.end(), boyer_moore_searcher(t.begin(), t.end()));
+    if (it != s.end())
+      cout << distance(s.begin(), it);
   }
   { // boyer_moore_horspool_searcher O(n/m) 最坏O(nm) 内存更少
-    auto it = search(text.begin(), text.end(),
-                     boyer_moore_horspool_searcher(str.begin(), str.end()));
-    if (it != text.end())
-      cout << distance(text.begin(), it);
+    auto it = search(s.begin(), s.end(),
+                     boyer_moore_horspool_searcher(t.begin(), t.end()));
+    if (it != s.end())
+      cout << distance(s.begin(), it);
   }
 }
 

@@ -17,7 +17,7 @@ vector<ll> linear_sieve(ll n) {
   return res;
 }
 
-vector<ll> factorize(ll n, const vector<ll> primes) {
+vector<ll> factorize(ll n, const vector<ll> &primes) {
   vector<ll> res;
   for (ll p : primes) {
     if (p * p > n)
